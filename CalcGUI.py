@@ -3,8 +3,6 @@
 # Form implementation generated from reading ui file 'GPAUserInterface.ui'
 #
 # Created by: PyQt4 UI code generator 4.12.1
-#
-# WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
@@ -47,6 +45,12 @@ class Ui_MainWindow(object):
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
         self.calcTab = QtGui.QWidget()
         self.calcTab.setObjectName(_fromUtf8("calcTab"))
+        self.calcBtn = QtGui.QPushButton(self.calcTab)
+        self.calcBtn.setGeometry(QtCore.QRect(450, 260, 141, 31))
+        self.calcBtn.setObjectName(_fromUtf8("calcBtn"))
+        self.exitBtn = QtGui.QPushButton(self.calcTab)
+        self.exitBtn.setGeometry(QtCore.QRect(720, 260, 141, 31))
+        self.exitBtn.setObjectName(_fromUtf8("exitBtn"))
         self.tabWidget.addTab(self.calcTab, _fromUtf8(""))
         self.aboutTab = QtGui.QWidget()
         self.aboutTab.setObjectName(_fromUtf8("aboutTab"))
@@ -76,11 +80,13 @@ class Ui_MainWindow(object):
         MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.calcBtn.setText(_translate("MainWindow", "Calculate", None))
+        self.exitBtn.setText(_translate("MainWindow", "Exit", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.calcTab), _translate("MainWindow", "Calculate", None))
         self.plainTextEdit.setPlainText(_translate("MainWindow", "This is a product created and developed by Justice Jacobs from FarBeyondAverage.\n"
 "\n"
