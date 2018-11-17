@@ -3,6 +3,8 @@
 # Form implementation generated from reading ui file 'GPAUserInterface.ui'
 #
 # Created by: PyQt4 UI code generator 4.12.1
+#
+# WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
@@ -24,10 +26,21 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(929, 512)
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(30, 12, 6))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Link, brush)
+        brush = QtGui.QBrush(QtGui.QColor(30, 12, 6))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Link, brush)
+        brush = QtGui.QBrush(QtGui.QColor(30, 12, 6))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Link, brush)
+        MainWindow.setPalette(palette)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
-        self.verticalLayout_2 = QtGui.QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.verticalLayout = QtGui.QVBoxLayout()
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.tabWidget = QtGui.QTabWidget(self.centralwidget)
@@ -54,19 +67,34 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.calcTab, _fromUtf8(""))
         self.aboutTab = QtGui.QWidget()
         self.aboutTab.setObjectName(_fromUtf8("aboutTab"))
-        self.horizontalLayoutWidget = QtGui.QWidget(self.aboutTab)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(-1, -1, 911, 401))
-        self.horizontalLayoutWidget.setObjectName(_fromUtf8("horizontalLayoutWidget"))
-        self.horizontalLayout = QtGui.QHBoxLayout(self.horizontalLayoutWidget)
-        self.horizontalLayout.setMargin(0)
-        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.plainTextEdit = QtGui.QPlainTextEdit(self.horizontalLayoutWidget)
-        self.plainTextEdit.setReadOnly(True)
+        self.label = QtGui.QLabel(self.aboutTab)
+        self.label.setGeometry(QtCore.QRect(10, 150, 231, 18))
+        self.label.setObjectName(_fromUtf8("label"))
+        self.plainTextEdit = QtGui.QPlainTextEdit(self.aboutTab)
+        self.plainTextEdit.setGeometry(QtCore.QRect(9, 9, 901, 391))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(29, 8, 3))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Highlight, brush)
+        brush = QtGui.QBrush(QtGui.QColor(29, 8, 3))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Highlight, brush)
+        brush = QtGui.QBrush(QtGui.QColor(226, 226, 226))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Highlight, brush)
+        self.plainTextEdit.setPalette(palette)
         self.plainTextEdit.setObjectName(_fromUtf8("plainTextEdit"))
-        self.horizontalLayout.addWidget(self.plainTextEdit)
+        self.devLbl = QtGui.QLabel(self.aboutTab)
+        self.devLbl.setGeometry(QtCore.QRect(10, 110, 161, 18))
+        self.devLbl.setOpenExternalLinks(True)
+        self.devLbl.setObjectName(_fromUtf8("devLbl"))
+        self.devSiteLbl = QtGui.QLabel(self.aboutTab)
+        self.devSiteLbl.setGeometry(QtCore.QRect(10, 170, 161, 18))
+        self.devSiteLbl.setOpenExternalLinks(True)
+        self.devSiteLbl.setObjectName(_fromUtf8("devSiteLbl"))
         self.tabWidget.addTab(self.aboutTab, _fromUtf8(""))
         self.verticalLayout.addWidget(self.tabWidget)
-        self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.horizontalLayout.addLayout(self.verticalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 929, 24))
@@ -88,19 +116,22 @@ class Ui_MainWindow(object):
         self.calcBtn.setText(_translate("MainWindow", "Calculate", None))
         self.exitBtn.setText(_translate("MainWindow", "Exit", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.calcTab), _translate("MainWindow", "Calculate", None))
+        self.label.setText(_translate("MainWindow", "http://www.github.com/golden-boy", None))
         self.plainTextEdit.setPlainText(_translate("MainWindow", "This is a product created and developed by Justice Jacobs from FarBeyondAverage.\n"
 "\n"
 "If you would like more information and/or would like to contact the developer, the following links will be useful:\n"
 "\n"
-"Developer Github\n"
-"http://www.github.com/golden-boy\n"
+"Developer Github: \n"
+"\n"
 "\n"
 "Developer Website \n"
-"http://www.FarBeyondAverage.com\n"
+"\n"
 "\n"
 "Online GPA Calculator\n"
 "<Place Github Pages URL to online gpa calculator>\n"
 "", None))
+        self.devLbl.setText(_translate("MainWindow", "<html><head/><a href=\"https://github.com/golden-boy\">Developer GitHub</a><body><p><br/></p></body></html>", None))
+        self.devSiteLbl.setText(_translate("MainWindow", "<html><head/><body><p><a href=\"http://FarBeyondAverage.com\"><span style=\" text-decoration: underline; color:#0000ff;\">Developer Website</span></a></p><p><br/></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aboutTab), _translate("MainWindow", "About", None))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar", None))
 

@@ -1,9 +1,12 @@
 '''
-
+Created by Justice Jacobs from FarBeyondAverage
 
 '''
 
 from PyQt4 import QtGui
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+
 import sys # required for argv
 import CalcGUI # PyQt UI
 
@@ -19,9 +22,8 @@ class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 		#print('This is the calculate functionality')
 		pass
 
-	def exit(self):  # exit button
-		pass
-		#print('This is the exit functionality')
+	def exit(self):  # exit application
+		self.close()
 
 
 
