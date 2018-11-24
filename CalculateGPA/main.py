@@ -12,20 +12,32 @@ import CalcGUI # PyQt UI
 
 class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 	def __init__(self):
-		super().__init__() # allows passed in variables to handle specific attributes
+		super().__init__() # allows passed in classes to handle specific attributes
 		self.setupUi(self)
 		self.setWindowTitle("GPA Calculator")
-		self.calcBtn.clicked.connect(self.calculate)
+		self.calcBtn.clicked.connect(self.user_output)
 		self.exitBtn.clicked.connect(self.exit)
+		self.lineEdit.setValidator(QDoubleValidator(0.99, 99.99, 2))
+		self.lineEdit_2.setValidator(QDoubleValidator(0.99, 99.99, 2))
+		self.lineEdit_3.setValidator(QDoubleValidator(0.99, 99.99, 2))
+		self.lst = []
 
-	def calculate(self): # calculate gpa
-		#print('This is the calculate functionality')
-		pass
+		#self.lst = [self.lineEdit.text()]
 
-	def exit(self):  # exit application
+	def exit(self): # exit button
 		self.close()
 
+	def calculate(self): # calculate gpa
+		#print(self.lineEdit.text())
+		  pass
 
+
+	def user_output(self): # output all relevant info to textEdit
+
+		if self.lineEdit.text() and self.lineEdit_2.text() and self.lineEdit_3.text():
+			print(self.textEdit.append('At your current grade {} you need a minimum grade of {} to get a {}'.format(self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_3.text())))
+		#for char in self.lst:
+			#print(self.textEdit.append(char))
 
 def main():
 	app = QtGui.QApplication(sys.argv)
