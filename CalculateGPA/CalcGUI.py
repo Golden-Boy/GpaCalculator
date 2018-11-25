@@ -41,6 +41,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
+        self.tabWidget.setMouseTracking(True)
         self.tabWidget.setTabShape(QtGui.QTabWidget.Rounded)
         self.tabWidget.setTabsClosable(False)
         self.tabWidget.setObjectName(_fromUtf8("tabWidget"))
@@ -73,6 +74,19 @@ class Ui_MainWindow(object):
         self.tab_3 = QtGui.QWidget()
         self.tab_3.setObjectName(_fromUtf8("tab_3"))
         self.tabWidget.addTab(self.tab_3, _fromUtf8(""))
+        self.tab_4 = QtGui.QWidget()
+        self.tab_4.setObjectName(_fromUtf8("tab_4"))
+        self.verticalLayout_2 = QtGui.QVBoxLayout(self.tab_4)
+        self.verticalLayout_2.setMargin(0)
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.verticalLayout = QtGui.QVBoxLayout()
+        self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
+        self.plainTextEdit_2 = QtGui.QPlainTextEdit(self.tab_4)
+        self.plainTextEdit_2.setReadOnly(True)
+        self.plainTextEdit_2.setObjectName(_fromUtf8("plainTextEdit_2"))
+        self.verticalLayout.addWidget(self.plainTextEdit_2)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+        self.tabWidget.addTab(self.tab_4, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
         self.verticalLayout_4 = QtGui.QVBoxLayout(self.tab_2)
@@ -107,11 +121,25 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.calcBtn.setText(_translate("MainWindow", "Calculate", None))
         self.exitBtn.setText(_translate("MainWindow", "Exit", None))
-        self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "e.g 72.00%", None))
-        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "e.g 72.00%", None))
-        self.lineEdit.setPlaceholderText(_translate("MainWindow", "e.g 72.00%", None))
+        self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "Current Grade (e.g 72.00%)", None))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "Target Grade (e.g 72.00%)", None))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "Exam Weight (e.g 20.00%)", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Final Grade Calculator", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "Grade Point Average Calculator", None))
+        self.plainTextEdit_2.setPlainText(_translate("MainWindow", "Final Grade Calculator Usage:\n"
+"\n"
+"All fields must be filled out for the \'calculate\' button to work\n"
+"\n"
+"Current Grade = Current grade, as a percentage, in the course\n"
+"Final Grade = Final grade, as a percentage, in the course\n"
+"Weight = The weight, as a percentage, of the test/quiz\n"
+"\n"
+"Grade Point Average Calculator\n"
+"\n"
+"\n"
+"\n"
+"", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "Help", None))
         self.plainTextEdit.setPlainText(_translate("MainWindow", "This is a product created and developed by Justice Jacobs from FarBeyondAverage.\n"
 "\n"
 "If you would like more information and/or would like to contact the developer, the following links will be useful:\n"

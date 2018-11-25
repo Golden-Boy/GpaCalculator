@@ -15,21 +15,31 @@ class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 		super().__init__() # allows passed in classes to handle specific attributes
 		self.setupUi(self)
 		self.setWindowTitle("GPA Calculator")
-		self.calcBtn.clicked.connect(self.user_output)
+		self.calcBtn.clicked.connect(self.calculate)
 		self.exitBtn.clicked.connect(self.exit)
-		self.lineEdit.setValidator(QDoubleValidator(0.99, 99.99, 2))
-		self.lineEdit_2.setValidator(QDoubleValidator(0.99, 99.99, 2))
-		self.lineEdit_3.setValidator(QDoubleValidator(0.99, 99.99, 2))
-		self.lst = []
+		self.lineEdit.setValidator(QDoubleValidator(.99, 99.99, 3))
+		self.lineEdit_2.setValidator(QDoubleValidator(.99, 99.99, 3))
+		self.lineEdit_3.setValidator(QDoubleValidator(.99, 99.99, 3))
 
-		#self.lst = [self.lineEdit.text()]
 
 	def exit(self): # exit button
 		self.close()
 
+
 	def calculate(self): # calculate gpa
-		#print(self.lineEdit.text())
-		  pass
+
+		d = self.lineEdit_2.text()
+		c = self.lineEdit_3.text()
+		w = self.lineEdit.text()
+
+		#print(self.textEdit.append(str(float(c) - (float(c) * ((1 - (float(w) / 100)) * float(1))) / (float(w) / 100))))
+
+		print(str(((float(d) - ((1 - float(w)) * float(c))) / float(w))))
+
+
+		#print(self.textEdit.append(str(((float(self.lineEdit_2.text()) - float(self.lineEdit_3.text() * (.1 - float(self.lineEdit.text())))) / float(self.lineEdit.text())))))
+
+		#print(self.textEdit.append(str(float(self.lineEdit_2.text()) - float(self.lineEdit_3.text())) * (.1 - float(self.lineEdit.text())) / float(self.lineEdit_3.text())))
 
 
 	def user_output(self): # output all relevant info to textEdit
