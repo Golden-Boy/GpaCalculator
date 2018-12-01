@@ -8,13 +8,13 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 import sys # required for argv
-import CalcGUI # PyQt UI
+import CalcGUI # PyQt User Interface
 
 class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 	def __init__(self):
 		super().__init__() # allows passed in classes to handle specific attributes
 		self.setupUi(self)
-		self.setWindowTitle("GPA Calculator")
+		self.setWindowTitle("Grade Calculator")
 		self.calcBtn.clicked.connect(self.calculate)
 		self.exitBtn.clicked.connect(self.exit)
 		self.lineEdit.setValidator(QDoubleValidator(.99, 99.99, 3))
@@ -22,33 +22,21 @@ class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 		self.lineEdit_3.setValidator(QDoubleValidator(.99, 99.99, 3))
 
 
-	def exit(self): # exit button
+	def exit(self): 
 		self.close()
 
 
-	def calculate(self): # calculate gpa
+	def calculate(self): 
 
-		d = self.lineEdit_2.text()
-		c = self.lineEdit_3.text()
-		w = self.lineEdit.text()
+		desiredGrade = self.lineEdit_2.text()
+		currentGrade = self.lineEdit_3.text() 
+		weightOfGrade = self.lineEdit.text() 
 
-		#print(self.textEdit.append(str(float(c) - (float(c) * ((1 - (float(w) / 100)) * float(1))) / (float(w) / 100))))
+		requiredGrade = ((((float(desiredGrade) / 100.0) - ((1 - float(weightOfGrade) / 100.0) * (float(currentGrade) / 100.0))) / (float(weightOfGrade) / 100.0))) * 100.0
 
-		print(str(((float(d) - ((1 - float(w)) * float(c))) / float(w))))
+		print(self.textEdit.append('You would need a {:.2f}% to get a {}%'.format(float(requiredGrade), self.lineEdit_2.text())))
 
-
-		#print(self.textEdit.append(str(((float(self.lineEdit_2.text()) - float(self.lineEdit_3.text() * (.1 - float(self.lineEdit.text())))) / float(self.lineEdit.text())))))
-
-		#print(self.textEdit.append(str(float(self.lineEdit_2.text()) - float(self.lineEdit_3.text())) * (.1 - float(self.lineEdit.text())) / float(self.lineEdit_3.text())))
-
-
-	def user_output(self): # output all relevant info to textEdit
-
-		if self.lineEdit.text() and self.lineEdit_2.text() and self.lineEdit_3.text():
-			print(self.textEdit.append('At your current grade {} you need a minimum grade of {} to get a {}'.format(self.lineEdit.text(), self.lineEdit_2.text(), self.lineEdit_3.text())))
-		#for char in self.lst:
-			#print(self.textEdit.append(char))
-
+	
 def main():
 	app = QtGui.QApplication(sys.argv)
 	form = CalculateApp()
