@@ -4,7 +4,7 @@ Created by Justice Jacobs from FarBeyondAverage
 '''
 
 from PyQt4 import QtGui
-from PyQt4.QtCore import *
+#from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 import sys # required for argv
@@ -26,16 +26,19 @@ class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 		self.close()
 
 
-	def calculate(self): 
+	def calculate(self):
 
-		desiredGrade = self.lineEdit_2.text()
-		currentGrade = self.lineEdit_3.text() 
-		weightOfGrade = self.lineEdit.text() 
+		if self.lineEdit_2.text() and self.lineEdit_3.text() and self.lineEdit.text():
 
-		requiredGrade = ((((float(desiredGrade) / 100.0) - ((1 - float(weightOfGrade) / 100.0) * (float(currentGrade) / 100.0))) / (float(weightOfGrade) / 100.0))) * 100.0
+			desiredGrade = self.lineEdit_2.text()
+			currentGrade = self.lineEdit_3.text()
+			weightOfGrade = self.lineEdit.text()
 
-		print(self.textEdit.append('You would need a {:.2f}% to get a {}%'.format(float(requiredGrade), self.lineEdit_2.text())))
+			requiredGrade = ((((float(desiredGrade) / 100.0) - ((1 - float(weightOfGrade) / 100.0) * (float(currentGrade) / 100.0))) / (float(weightOfGrade) / 100.0))) * 100.0
 
+			print(self.textEdit.append('You would need a {:.2f}% to get a {}%'.format(float(requiredGrade), self.lineEdit_2.text())))
+		else:
+			print(self.textEdit.append("Please fill in all information"))
 	
 def main():
 	app = QtGui.QApplication(sys.argv)
@@ -46,7 +49,3 @@ def main():
 
 if __name__ == '__main__':
 	main()
-
-	'''
-	modification
-	'''
