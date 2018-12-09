@@ -157,13 +157,16 @@
          <widget class="QWidget" name="formLayoutWidget">
           <property name="geometry">
            <rect>
-            <x>710</x>
+            <x>590</x>
             <y>0</y>
-            <width>171</width>
-            <height>291</height>
+            <width>121</width>
+            <height>301</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
            <item row="0" column="0" colspan="2">
             <widget class="QLineEdit" name="lineEdit_4">
              <property name="inputMask">
@@ -174,56 +177,14 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_5">
-             <property name="placeholderText">
-              <string>e.g. course</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_6">
-             <property name="placeholderText">
-              <string>e.g. course</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_7">
-             <property name="placeholderText">
-              <string>e.g. course</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_9">
-             <property name="placeholderText">
-              <string>e.g. course</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_8">
-             <property name="placeholderText">
-              <string>e.g. course</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_10">
-             <property name="placeholderText">
-              <string>e.g. course</string>
-             </property>
-            </widget>
-           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="formLayoutWidget_2">
           <property name="geometry">
            <rect>
-            <x>450</x>
+            <x>710</x>
             <y>0</y>
-            <width>160</width>
+            <width>71</width>
             <height>301</height>
            </rect>
           </property>
@@ -241,27 +202,102 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QSpinBox" name="spinBox_2">
-             <property name="minimum">
-              <number>1</number>
+          </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButton">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>260</y>
+            <width>101</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add Course</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="formLayoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>780</x>
+            <y>0</y>
+            <width>101</width>
+            <height>301</height>
+           </rect>
+          </property>
+          <layout class="QFormLayout" name="formLayout_3">
+           <property name="fieldGrowthPolicy">
+            <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+           </property>
+           <item row="0" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox">
+             <property name="enabled">
+              <bool>true</bool>
              </property>
-             <property name="maximum">
-              <number>6</number>
+             <property name="editable">
+              <bool>true</bool>
              </property>
-            </widget>
-           </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QSpinBox" name="spinBox_3">
-             <property name="minimum">
-              <number>1</number>
+             <property name="currentIndex">
+              <number>0</number>
              </property>
-             <property name="maximum">
-              <number>6</number>
-             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
+         </widget>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>260</y>
+            <width>96</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Calculate</string>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="textEdit_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>121</width>
+            <height>301</height>
+           </rect>
+          </property>
+          <property name="cursor" stdset="0">
+           <cursorShape>ArrowCursor</cursorShape>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
          </widget>
         </widget>
         <widget class="QWidget" name="tab_4">
@@ -348,7 +384,7 @@ Online GPA Calculator
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>33</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>
