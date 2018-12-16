@@ -26,15 +26,12 @@ class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 		self.lineEdit_2.setValidator(QDoubleValidator(.99, 99.99, 3))
 		self.lineEdit_3.setValidator(QDoubleValidator(.99, 99.99, 3))
 
-		self.comboBox = QtGui.QComboBox(self.formLayoutWidget_3)
-		self.formLayout_3.setWidget(1, QtGui.QFormLayout.SpanningRole, self.comboBox)
-		self.comboBox.setCurrentIndex(1)
+
+		#self.comboBox = QtGui.QComboBox(self.formLayoutWidget_3)
+		#self.formLayout_3.setWidget(1, QtGui.QFormLayout.SpanningRole, self.comboBox)
+		#self.comboBox.setCurrentIndex(1)
 
 		self.count = 0
-
-
-		self.lst = ['This', 'may', 'a', 'be']
-
 
 
 	def exit(self): 
@@ -72,7 +69,11 @@ class CalculateApp(QtGui.QMainWindow, CalcGUI.Ui_MainWindow):
 		#self.comboBox.setCurrentIndex(4)
 
 	def output(self):
-		print(self.textEdit_2.append(str(self.comboBox.currentText)))
+		text = str(self.comboBox.currentText())
+
+
+		print(self.textEdit_2.append(str(self.QSpinBox.value())))
+		#print(self.textEdit_2.append(str(self.comboBox.currentText())))
 
 
 	def click_count(self):

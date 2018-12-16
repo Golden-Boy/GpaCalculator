@@ -43,8 +43,11 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
         <property name="mouseTracking">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
         <property name="tabShape">
          <enum>QTabWidget::Rounded</enum>
@@ -157,10 +160,10 @@
          <widget class="QWidget" name="formLayoutWidget">
           <property name="geometry">
            <rect>
-            <x>590</x>
+            <x>0</x>
             <y>0</y>
-            <width>121</width>
-            <height>301</height>
+            <width>431</width>
+            <height>261</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
@@ -177,15 +180,85 @@
              </property>
             </widget>
            </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_5">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_6">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_7">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_8">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_9">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_10">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="QLineEdit" name="lineEdit_11">
+             <property name="inputMask">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>e.g. course</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="formLayoutWidget_2">
           <property name="geometry">
            <rect>
-            <x>710</x>
+            <x>560</x>
             <y>0</y>
-            <width>71</width>
-            <height>301</height>
+            <width>91</width>
+            <height>261</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_2">
@@ -195,7 +268,77 @@
            <item row="0" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox">
              <property name="minimum">
-              <number>1</number>
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_3">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_4">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_5">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_6">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_7">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_8">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QSpinBox" name="spinBox_2">
+             <property name="minimum">
+              <number>0</number>
              </property>
              <property name="maximum">
               <number>6</number>
@@ -207,23 +350,23 @@
          <widget class="QPushButton" name="pushButton">
           <property name="geometry">
            <rect>
-            <x>140</x>
-            <y>260</y>
-            <width>101</width>
+            <x>420</x>
+            <y>270</y>
+            <width>141</width>
             <height>30</height>
            </rect>
           </property>
           <property name="text">
-           <string>Add Course</string>
+           <string>Add Course(s)</string>
           </property>
          </widget>
          <widget class="QWidget" name="formLayoutWidget_3">
           <property name="geometry">
            <rect>
-            <x>780</x>
+            <x>760</x>
             <y>0</y>
-            <width>101</width>
-            <height>301</height>
+            <width>121</width>
+            <height>251</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_3">
@@ -236,7 +379,311 @@
               <bool>true</bool>
              </property>
              <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_2">
+             <property name="enabled">
               <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_3">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_4">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_5">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_6">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="6" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_7">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="7" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_8">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>A</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>B</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>C</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>D</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="2">
+            <widget class="QComboBox" name="comboBox_9">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
              </property>
              <property name="currentIndex">
               <number>0</number>
@@ -273,9 +720,9 @@
          <widget class="QPushButton" name="pushButton_2">
           <property name="geometry">
            <rect>
-            <x>280</x>
-            <y>260</y>
-            <width>96</width>
+            <x>190</x>
+            <y>270</y>
+            <width>161</width>
             <height>30</height>
            </rect>
           </property>
@@ -286,17 +733,20 @@
          <widget class="QTextEdit" name="textEdit_2">
           <property name="geometry">
            <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>121</width>
-            <height>301</height>
+            <x>760</x>
+            <y>260</y>
+            <width>104</width>
+            <height>31</height>
            </rect>
           </property>
-          <property name="cursor" stdset="0">
-           <cursorShape>ArrowCursor</cursorShape>
+          <property name="mouseTracking">
+           <bool>true</bool>
           </property>
           <property name="readOnly">
            <bool>true</bool>
+          </property>
+          <property name="acceptRichText">
+           <bool>false</bool>
           </property>
          </widget>
         </widget>
