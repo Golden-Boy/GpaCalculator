@@ -26,5 +26,5 @@ missing module named msvcrt - imported by subprocess (conditional), /home/golden
 missing module named _winapi - imported by encodings (delayed, conditional, optional), subprocess (conditional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level)
 missing module named winreg - imported by platform (delayed, optional), mimetypes (optional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level), urllib.request (delayed, conditional, optional)
 missing module named nt - imported by os (conditional, optional), ntpath (conditional, optional), shutil (conditional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level)
-missing module named org - imported by pickle (optional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level)
-missing module named 'org.python' - imported by copy (optional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level), xml.sax (delayed, conditional)
+missing module named 'org.python' - imported by pickle (optional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level), xml.sax (delayed, conditional)
+missing module named org - imported by copy (optional), /home/goldenboyy/Documents/GpaCalculator/CalculateGPA/main.py (top-level)
