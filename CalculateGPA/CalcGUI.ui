@@ -49,11 +49,14 @@
         <property name="mouseTracking">
          <bool>false</bool>
         </property>
+        <property name="inputMethodHints">
+         <set>Qt::ImhDigitsOnly</set>
+        </property>
         <property name="tabShape">
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>2</number>
         </property>
         <property name="tabsClosable">
          <bool>false</bool>
@@ -83,8 +86,8 @@
            <rect>
             <x>340</x>
             <y>250</y>
-            <width>211</width>
-            <height>30</height>
+            <width>171</width>
+            <height>31</height>
            </rect>
           </property>
           <property name="text">
@@ -104,7 +107,7 @@
            <string>Exit</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="currentGrade">
           <property name="geometry">
            <rect>
             <x>620</x>
@@ -120,7 +123,7 @@
            <string>Current Grade (e.g 70.00%)</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_2">
+         <widget class="QLineEdit" name="targetGrade">
           <property name="geometry">
            <rect>
             <x>620</x>
@@ -136,7 +139,7 @@
            <string>Target Grade (e.g 75.00%)</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="examWeight">
           <property name="geometry">
            <rect>
             <x>620</x>
@@ -171,7 +174,7 @@
             <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
            </property>
            <item row="0" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_4">
+            <widget class="QLineEdit" name="course_4">
              <property name="inputMask">
               <string/>
              </property>
@@ -181,7 +184,7 @@
             </widget>
            </item>
            <item row="1" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_5">
+            <widget class="QLineEdit" name="course_5">
              <property name="inputMask">
               <string/>
              </property>
@@ -191,7 +194,7 @@
             </widget>
            </item>
            <item row="2" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_6">
+            <widget class="QLineEdit" name="course_6">
              <property name="inputMask">
               <string/>
              </property>
@@ -201,7 +204,7 @@
             </widget>
            </item>
            <item row="3" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_7">
+            <widget class="QLineEdit" name="course_7">
              <property name="inputMask">
               <string/>
              </property>
@@ -211,7 +214,7 @@
             </widget>
            </item>
            <item row="4" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_8">
+            <widget class="QLineEdit" name="course_8">
              <property name="inputMask">
               <string/>
              </property>
@@ -221,7 +224,7 @@
             </widget>
            </item>
            <item row="5" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_9">
+            <widget class="QLineEdit" name="course_9">
              <property name="inputMask">
               <string/>
              </property>
@@ -231,7 +234,7 @@
             </widget>
            </item>
            <item row="6" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_10">
+            <widget class="QLineEdit" name="course_10">
              <property name="inputMask">
               <string/>
              </property>
@@ -241,7 +244,7 @@
             </widget>
            </item>
            <item row="7" column="0" colspan="2">
-            <widget class="QLineEdit" name="lineEdit_11">
+            <widget class="QLineEdit" name="course_11">
              <property name="inputMask">
               <string/>
              </property>
@@ -267,92 +270,119 @@
            </property>
            <item row="0" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox">
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="2" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_3">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="3" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_4">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="4" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_5">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="5" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_6">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="6" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_7">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="7" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_8">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
            <item row="1" column="0" colspan="2">
             <widget class="QSpinBox" name="spinBox_2">
              <property name="minimum">
-              <number>0</number>
+              <number>-1</number>
              </property>
              <property name="maximum">
               <number>6</number>
+             </property>
+             <property name="value">
+              <number>-1</number>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
-         <widget class="QPushButton" name="pushButton">
+         <widget class="QPushButton" name="exitBtn2">
           <property name="geometry">
            <rect>
-            <x>420</x>
+            <x>490</x>
             <y>270</y>
-            <width>141</width>
+            <width>161</width>
             <height>30</height>
            </rect>
           </property>
@@ -366,7 +396,7 @@
             <x>760</x>
             <y>0</y>
             <width>121</width>
-            <height>251</height>
+            <height>261</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout_3">
@@ -384,6 +414,11 @@
              <property name="currentIndex">
               <number>0</number>
              </property>
+             <item>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </item>
              <item>
               <property name="text">
                <string>A</string>
@@ -424,6 +459,11 @@
              </property>
              <item>
               <property name="text">
+               <string>-</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string>A</string>
               </property>
              </item>
@@ -460,6 +500,11 @@
              <property name="currentIndex">
               <number>0</number>
              </property>
+             <item>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </item>
              <item>
               <property name="text">
                <string>A</string>
@@ -500,6 +545,11 @@
              </property>
              <item>
               <property name="text">
+               <string>-</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string>A</string>
               </property>
              </item>
@@ -536,6 +586,11 @@
              <property name="currentIndex">
               <number>0</number>
              </property>
+             <item>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </item>
              <item>
               <property name="text">
                <string>A</string>
@@ -576,6 +631,11 @@
              </property>
              <item>
               <property name="text">
+               <string>-</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string>A</string>
               </property>
              </item>
@@ -612,6 +672,11 @@
              <property name="currentIndex">
               <number>0</number>
              </property>
+             <item>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </item>
              <item>
               <property name="text">
                <string>A</string>
@@ -652,6 +717,11 @@
              </property>
              <item>
               <property name="text">
+               <string>-</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string>A</string>
               </property>
              </item>
@@ -690,6 +760,11 @@
              </property>
              <item>
               <property name="text">
+               <string>-</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
                <string>A</string>
               </property>
              </item>
@@ -717,10 +792,10 @@
            </item>
           </layout>
          </widget>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="calcBtn2">
           <property name="geometry">
            <rect>
-            <x>190</x>
+            <x>300</x>
             <y>270</y>
             <width>161</width>
             <height>30</height>
@@ -733,10 +808,10 @@
          <widget class="QTextEdit" name="textEdit_2">
           <property name="geometry">
            <rect>
-            <x>700</x>
-            <y>260</y>
-            <width>171</width>
-            <height>31</height>
+            <x>680</x>
+            <y>270</y>
+            <width>161</width>
+            <height>30</height>
            </rect>
           </property>
           <property name="mouseTracking">
@@ -764,20 +839,21 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Zekton'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Final Grade Calculator Usage&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;All fields must be filled out for the 'calculate' button to work&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Current Grade = Current grade, as a percentage, in the course&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Final Grade = Final grade, as a percentage, in the course&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Weight = The weight, as a percentage, on the test/quiz&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Grade Point Average Calculator Usage:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Course Name(optional) = Name of Course&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Credit Hours = Credit Hours of Course&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Grade Received = Final grade in Course&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Final Grade Calculator Usage&lt;/span&gt;:&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All fields must be filled out for the 'calculate' button to work&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Current Grade = Current grade, as a percentage, in the course&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Final Grade = Final grade, as a percentage, in the course&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Weight = The weight, as a percentage, on the test/quiz&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Grade Point Average Calculator Usage:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Course Name(optional) = Name of Course&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Credit Hours = Credit Hours of Course&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Grade Received = Final grade in Course&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;NOTE: Credit Hour(s) and Grade Received both must be filled out for a calculation.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
@@ -811,7 +887,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Zekton'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;This is a product created and developed by Justice Jacobs from FarBeyondAverage.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;This is a product created and developed by Justice Jacobs by FarBeyondAverage.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;If you would like more information and/or would like to contact the developer, the following links will be useful:&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
